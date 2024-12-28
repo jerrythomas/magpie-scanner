@@ -1,0 +1,17 @@
+.svelte-kit/**
+static/**
+build/**
+node_modules/**
+coverage/**
+fixtures/error/**
+dist/**
+**/.svelte-kit/**
+**/fixtures/error/**
+**/dist/**
+**/coverage/**
+**/node_modules/**
+package.json
+tsconfig.json
+.eslintrc
+*.webmanifest
+pnpm-lock.yaml

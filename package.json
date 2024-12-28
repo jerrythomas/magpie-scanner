@@ -2,13 +2,28 @@
   "name": "magpie",
   "module": "src/index.js",
   "type": "module",
+  "scripts": {
+    "test": "vitest",
+    "test:watch": "vitest watch",
+    "test:coverage": "vitest run --coverage",
+    "format": "prettier --write ."
+  },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@vitest/coverage-v8": "latest",
+    "jsdom": "^25.0.1",
+    "vitest": "latest"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
+  "workspaces": [
+    "packages/*",
+    "apps/*",
+    "adapters/*"
+  ],
   "dependencies": {
-    "sade": "^1.8.1"
+    "prettier": "^3.4.2",
+    "vite": "^6.0.6"
   }
 }
