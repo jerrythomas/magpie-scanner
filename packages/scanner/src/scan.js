@@ -1,7 +1,7 @@
 import { globSync } from 'glob'
 import { basename, extname } from 'path'
 import { statSync } from 'fs'
-import { ALL_SUPPORTED_EXTENSIONS } from './config/constants'
+import { ALL_SUPPORTED_EXTENSIONS } from './constants'
 import { groupImagesByFolder, groupVideoContent } from './groupers'
 
 /**

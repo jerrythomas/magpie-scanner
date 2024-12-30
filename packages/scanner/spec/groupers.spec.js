@@ -3,10 +3,10 @@ import { scanFolder } from '../src/scan'
 import { groupImagesByFolder, groupVideoContent } from '../src/groupers'
 import { mkdir, writeFile, rm } from 'fs/promises'
 import { join } from 'path'
-import { METADATA_FILES } from '../src/config/constants'
+import { METADATA_FILES } from '../src/constants'
 
 describe('Media Groupers', () => {
-	const testDir = 'apps/cli/fixtures/test-groups'
+	const testDir = 'fixtures/test-groups'
 	const testContent = 'test content'
 
 	const imageGalleryMetadata = {

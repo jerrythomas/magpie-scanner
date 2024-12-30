@@ -1,10 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import {
-	applyCleanup,
-	findMatch,
-	findClosestMediaType,
-	detectMediaType
-} from '../../src/utils/parser'
+import { applyCleanup, findMatch, findClosestMediaType, detectMediaType } from '../src/parser'
 
 describe('Parser Utils', () => {
 	describe('applyCleanup', () => {

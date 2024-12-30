@@ -1,5 +1,5 @@
 import { basename, dirname } from 'path'
-import { SUPPORTED_EXTENSIONS, METADATA_FILES } from './config/constants'
+import { SUPPORTED_EXTENSIONS, METADATA_FILES } from './constants'
 
 /**
  * Sort files within a group - metadata files first, then alphabetically by filename

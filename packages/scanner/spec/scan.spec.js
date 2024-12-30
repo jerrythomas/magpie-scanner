@@ -1,12 +1,12 @@
 import { describe, it, expect, beforeAll, afterAll } from 'vitest'
-import { ALL_SUPPORTED_EXTENSIONS, SUPPORTED_EXTENSIONS } from '../src/config/constants'
+import { ALL_SUPPORTED_EXTENSIONS, SUPPORTED_EXTENSIONS } from '../src/constants'
 import { scanFolder, scanAndGroup } from '../src/scan'
 import { mkdir, writeFile, rm } from 'fs/promises'
 import { join } from 'path'
 
 describe('scan', () => {
 	describe('scanFolder', () => {
-		const testDir = 'apps/cli/fixtures/test-media'
+		const testDir = 'fixtures/test-media'
 		const testContent = 'test content' // consistent content for size checking
 
 		// Setup test directory structure once before all tests
@@ -118,7 +118,7 @@ describe('scan', () => {
 	})
 
 	describe('scanAndGroup', () => {
-		const testDir = 'apps/cli/fixtures/test-scan-group'
+		const testDir = 'fixtures/test-scan-group'
 		const testContent = 'test content'
 
 		beforeAll(async () => {

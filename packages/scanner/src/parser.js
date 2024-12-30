@@ -1,5 +1,5 @@
 import { pathPatterns } from '@aristo/patterns'
-import { VALID_MEDIA_TYPES, TYPE_ALIASES } from '../config/constants'
+import { VALID_MEDIA_TYPES, TYPE_ALIASES } from './constants'
 
 /**
  * Applies cleanup rules to a string

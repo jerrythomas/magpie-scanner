@@ -1,5 +1,3 @@
-// skipcq: JS-E1004 - Needed for exposing all types
-export * from './types.js'
 // skipcq: JS-E1004 - Needed for exposing all common patterns
 export * from './common.js'
 // skipcq: JS-E1004 - Needed for exposing all file patterns

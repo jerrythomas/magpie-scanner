@@ -1,0 +1,28 @@
+{
+  "name": "@aristo/scanner",
+  "module": "src/index.js",
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "vitest": "latest"
+  },
+  "files": [
+    "src/**/*.js",
+    "!spec/**",
+    "!dist/**",
+    "dist/**/*.d.ts"
+  ],
+  "exports": {
+    "./src": "./src",
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./src/index.js"
+    }
+  },
+  "dependencies": {
+    "@aristo/patterns": "workspace:*"
+  }
+}
