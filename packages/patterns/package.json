@@ -9,7 +9,10 @@
     "vitest": "latest"
   },
   "files": [
-    "src/**/*.js"
+    "src/**/*.js",
+    "!spec/**",
+    "!dist/**",
+    "dist/**/*.d.ts"
   ],
   "exports": {
     "./src": "./src",

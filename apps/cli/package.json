@@ -2,6 +2,9 @@
   "name": "@aristo/cli",
   "module": "src/index.js",
   "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "vitest": "latest"
   },
@@ -10,5 +13,19 @@
   },
   "dependencies": {
     "@aristo/patterns": "workspace:*"
+  },
+  "files": [
+    "src/**/*.js",
+    "!spec/**",
+    "!dist/**",
+    "dist/**/*.d.ts"
+  ],
+  "exports": {
+    "./src": "./src",
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./src/index.js"
+    }
   }
 }
