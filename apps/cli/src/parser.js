@@ -1,43 +1,5 @@
-import { patterns } from './config/patterns.js'
+import { patterns } from './config/patterns/index.js'
 import { basename, extname } from 'path'
-
-export class MediaParseError extends Error {
-	constructor(message, code, details = {}) {
-		super(message)
-		this.name = 'MediaParseError'
-		this.code = code
-		this.details = details
-	}
-}
-/**
- * Applies cleanup rules to a string
- * @param {string} text
- * @param {Array<{find: RegExp, replace: string}>} rules
- * @returns {string}
- */
-function applyCleanup(text, rules) {
-	return rules.reduce((result, rule) => result.replace(rule.find, rule.replace), text).trim()
-}
-
-/**
- * Attempts to match a string against multiple patterns
- * @param {string} text
- * @param {Array<{pattern: RegExp, description: string}>} patterns
- * @param {string} errorCode
- * @returns {RegExpMatchArray}
- */
-function findMatch(text, patternList, errorCode) {
-	for (const { pattern } of patternList) {
-		const match = text.match(pattern)
-		if (match) {
-			return match
-		}
-	}
-	throw new MediaParseError('No matching pattern found', errorCode, {
-		text,
-		attemptedPatterns: patternList.map((p) => p.description)
-	})
-}
 
 export function parseSeries(filename) {
 	const withoutExt = filename.replace(/\.[^/.]+$/, '')
