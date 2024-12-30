@@ -1,5 +1,6 @@
 {
   "name": "aristo",
+  "version": "1.0.0-next.1",
   "module": "src/index.js",
   "type": "module",
   "scripts": {
@@ -7,13 +8,19 @@
     "test:watch": "vitest watch",
     "test:coverage": "vitest run --coverage",
     "format": "prettier --write .",
-    "lint": "eslint --fix"
+    "lint": "eslint --fix",
+    "version": "bumpp",
+    "release": "bun test && bun -r publish"
   },
   "devDependencies": {
     "@types/bun": "latest",
     "@vitest/coverage-v8": "latest",
     "jsdom": "^25.0.1",
-    "vitest": "latest"
+    "vitest": "latest",
+    "bumpp": "^9.9.2",
+    "eslint": "^9.17.0",
+    "prettier": "^3.4.2",
+    "vite": "^6.0.6"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
@@ -22,10 +29,5 @@
     "./packages/*",
     "./apps/*",
     "./adapters/*"
-  ],
-  "dependencies": {
-    "eslint": "^9.17.0",
-    "prettier": "^3.4.2",
-    "vite": "^6.0.6"
-  }
+  ]
 }
