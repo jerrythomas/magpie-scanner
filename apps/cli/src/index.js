@@ -8,8 +8,7 @@ prog
 	.describe('Rename episodes in a folder')
 	.option('-f, --folder', 'folder to process', cwd())
 	.option('-s, --separator', 'separator', '\\s*-?\\s*')
-	.action(async (opts) => {
-		console.log(opts)
+	.action((opts) => {
 		scanFolder(opts.folder, opts.separator)
 	})
 

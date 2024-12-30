@@ -158,7 +158,7 @@ describe('scan', () => {
 			await rm(testDir, { recursive: true, force: true })
 		})
 
-		it('should create appropriate groups and leave other files standalone', async () => {
+		it('should create appropriate groups and leave other files standalone', () => {
 			const results = scanAndGroup(testDir)
 
 			// Validate results structure

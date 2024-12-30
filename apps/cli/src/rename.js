@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import { parseEpisode } from './parser'
-
+/* eslint-disable no-console */
 export function scanFolder(folderPath, separator) {
 	const files = fs.readdirSync(folderPath)
 	const episodes = []

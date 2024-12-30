@@ -67,7 +67,7 @@ describe('Media Groupers', () => {
 	})
 
 	describe('groupImagesByFolder', () => {
-		it('should list metadata.json first in group items', async () => {
+		it('should list metadata.json first in group items', () => {
 			const files = scanFolder(testDir)
 			const groups = groupImagesByFolder(files)
 
@@ -75,7 +75,7 @@ describe('Media Groupers', () => {
 			expect(gallery1.items[0].filename).toBe('metadata.json')
 		})
 
-		it('should list metadata.json first in group items', async () => {
+		it('should list metadata.json first in group items', () => {
 			const files = scanFolder(testDir)
 			const groups = groupImagesByFolder(files)
 
@@ -99,7 +99,7 @@ describe('Media Groupers', () => {
 			])
 		})
 
-		it('should list metadata.db first in group items', async () => {
+		it('should list metadata.db first in group items', () => {
 			const files = scanFolder(testDir)
 			const groups = groupImagesByFolder(files)
 
@@ -107,7 +107,7 @@ describe('Media Groupers', () => {
 			expect(gallery3.items[0].filename).toBe('metadata.db')
 		})
 
-		it('should handle multiple metadata files and sort them first', async () => {
+		it('should handle multiple metadata files and sort them first', () => {
 			const files = scanFolder(testDir)
 			const groups = groupImagesByFolder(files)
 
@@ -120,7 +120,7 @@ describe('Media Groupers', () => {
 			expect(metadataFiles).toEqual(['metadata.db', 'metadata.json'])
 		})
 
-		it('should sort non-metadata files alphabetically', async () => {
+		it('should sort non-metadata files alphabetically', () => {
 			const files = scanFolder(testDir)
 			const groups = groupImagesByFolder(files)
 
@@ -132,7 +132,7 @@ describe('Media Groupers', () => {
 			expect(imageFiles).toEqual(['beach.jpg', 'mountain.png'])
 		})
 
-		it('should calculate correct group size', async () => {
+		it('should calculate correct group size', () => {
 			const files = scanFolder(testDir)
 			const groups = groupImagesByFolder(files)
 
@@ -142,7 +142,7 @@ describe('Media Groupers', () => {
 			expect(gallery1.size).toBe(expectedSize)
 		})
 
-		it('should handle groups without metadata files', async () => {
+		it('should handle groups without metadata files', () => {
 			const files = scanFolder(testDir)
 			const groups = groupImagesByFolder(files)
 
@@ -153,7 +153,7 @@ describe('Media Groupers', () => {
 	})
 
 	describe('groupVideoContent', () => {
-		it('should group videos with their subtitle files', async () => {
+		it('should group videos with their subtitle files', () => {
 			const files = scanFolder(testDir)
 			const groups = groupVideoContent(files)
 
@@ -164,7 +164,7 @@ describe('Media Groupers', () => {
 			expect(movieGroup.size).toBe(movieGroup.items.reduce((sum, file) => sum + file.size, 0))
 		})
 
-		it('should create separate groups for different videos', async () => {
+		it('should create separate groups for different videos', () => {
 			const files = scanFolder(testDir)
 			const groups = groupVideoContent(files)
 
