@@ -1,13 +1,13 @@
 import { describe, it, expect } from 'vitest'
-import { bookPatterns } from '../../../src/config/patterns/books'
+import { showPatterns } from '../src/shows'
 
-describe('Book Patterns', () => {
+describe('Show Patterns', () => {
 	it('should include all keys', () => {
-		expect(Object.keys(bookPatterns)).toEqual(['title', 'author', 'year', 'cleanup'])
+		expect(Object.keys(showPatterns)).toEqual(['series', 'episode', 'year', 'cleanup'])
 	})
 
-	describe('Author', () => {
-		bookPatterns.author.forEach(({ pattern, description, example, expected }) => {
+	describe('Series', () => {
+		showPatterns.series.forEach(({ pattern, description, example, expected }) => {
 			it(`should match "${description}"`, () => {
 				expect(example).toMatch(pattern)
 			})
@@ -17,12 +17,12 @@ describe('Book Patterns', () => {
 			})
 		})
 	})
-	describe('Title', () => {
-		bookPatterns.title.forEach(({ pattern, description, example, expected }) => {
+	describe('Episode', () => {
+		showPatterns.episode.forEach(({ pattern, description, example, expected }) => {
 			it(`should match "${description}"`, () => {
 				expect(example).toMatch(pattern)
 			})
-			it('should extract author correctly', () => {
+			it('should extract episode correctly', () => {
 				const match = example.match(pattern)
 				expect(match.groups).toEqual(expected)
 			})
@@ -30,7 +30,7 @@ describe('Book Patterns', () => {
 	})
 
 	describe('Year', () => {
-		bookPatterns.year.forEach(({ pattern, description, example, expected }) => {
+		showPatterns.year.forEach(({ pattern, description, example, expected }) => {
 			it(`should match "${description}"`, () => {
 				expect(example).toMatch(pattern)
 			})

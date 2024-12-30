@@ -1,0 +1,22 @@
+{
+  "name": "@aristo/patterns",
+  "module": "src/index.js",
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "vitest": "latest"
+  },
+  "files": [
+    "src/**/*.js"
+  ],
+  "exports": {
+    "./src": "./src",
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./src/index.js"
+    }
+  }
+}

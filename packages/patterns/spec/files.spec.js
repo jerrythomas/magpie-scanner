@@ -1,13 +1,13 @@
 import { describe, it, expect } from 'vitest'
-import { pathPatterns } from '../../../src/config/patterns/path'
+import { filePatterns } from '../src/files'
 
-describe('Path Patterns', () => {
+describe('File Patterns', () => {
 	it('should include all keys', () => {
-		expect(Object.keys(pathPatterns)).toEqual(['media'])
+		expect(Object.keys(filePatterns)).toEqual(['metadata'])
 	})
 
 	describe('Media', () => {
-		pathPatterns.media.forEach(({ pattern, description, example, expected }) => {
+		filePatterns.metadata.forEach(({ pattern, description, example, expected }) => {
 			it(`should match "${description}"`, () => {
 				expect(example).toMatch(pattern)
 			})

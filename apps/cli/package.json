@@ -1,5 +1,5 @@
 {
-  "name": "magpie",
+  "name": "@aristo/cli",
   "module": "src/index.js",
   "type": "module",
   "devDependencies": {
@@ -9,7 +9,6 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "sade": "^1.8.1",
-    "vitest": "^2.1.8"
+    "@aristo/patterns": "workspace:*"
   }
 }

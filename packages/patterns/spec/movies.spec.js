@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { moviePatterns } from '../../../src/config/patterns/movies'
+import { moviePatterns } from '../src/movies'
 
 describe('Movie Patterns', () => {
 	it('should include all keys', () => {

@@ -1,4 +1,4 @@
-import { pathPatterns } from '../config/patterns/index'
+import { pathPatterns } from '@aristo/patterns'
 import { VALID_MEDIA_TYPES, TYPE_ALIASES } from '../config/constants'
 
 /**
@@ -34,7 +34,7 @@ export function findMatch(text, patternList, errorCode) {
 /**
  * Find the closest matching media type
  * @param {string} type - Type string to match
- * @returns {MediaType} - Matched media type or 'unknown'
+ * @returns {import('./types').MediaType} - Matched media type or 'unknown'
  */
 export const findClosestMediaType = (type) => {
 	if (!type) return 'unknown'
@@ -67,11 +67,5 @@ export const detectMediaType = (path) => {
 		return findClosestMediaType(result.groups.type)
 	}
 
-	// If pattern has a tag, find closest match
-	if (result.pattern.tag) {
-		return findClosestMediaType(result.pattern.tag)
-	}
-
-	// Default to show if no explicit type found
-	// return 'unknown'
+	return findClosestMediaType(result.pattern.tag)
 }

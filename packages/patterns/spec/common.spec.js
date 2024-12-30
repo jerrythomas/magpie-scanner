@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { commonPatterns } from '../../../src/config/patterns/common'
+import { commonPatterns } from '../src/common'
 
 describe('Common Patterns', () => {
 	it('should include all keys', () => {

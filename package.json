@@ -1,5 +1,5 @@
 {
-  "name": "magpie",
+  "name": "aristo",
   "module": "src/index.js",
   "type": "module",
   "scripts": {
@@ -18,9 +18,9 @@
     "typescript": "^5.0.0"
   },
   "workspaces": [
-    "packages/*",
-    "apps/*",
-    "adapters/*"
+    "./packages/*",
+    "./apps/*",
+    "./adapters/*"
   ],
   "dependencies": {
     "prettier": "^3.4.2",
