@@ -1,0 +1,23 @@
+{
+  "git": {
+    "commitMessage": "chore: release v${version}",
+    "tagName": "v${version}"
+  },
+  "npm": {
+    "publish": false
+  },
+  "plugins": {
+    "@release-it/conventional-changelog": {
+      "preset": "conventionalcommits",
+      "infile": "CHANGELOG.md"
+    }
+  },
+  "hooks": {
+    "before:init": ["bun test"]
+  },
+  "workspaces": {
+    "publish": true,
+    "packages": ["packages/*", "apps/*", "adapters/*"]
+  },
+  "bumpFiles": ["package.json", "packages/*/package.json", "apps/*/package.json"]
+}

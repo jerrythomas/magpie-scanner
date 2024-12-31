@@ -1,5 +1,5 @@
 {
-  "name": "@aristo/cli",
+  "name": "@aritzo/cli",
   "version": "1.0.0-next.1",
   "module": "src/index.js",
   "type": "module",
@@ -13,7 +13,7 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "@aristo/patterns": "workspace:*"
+    "@aritzo/patterns": "workspace:*"
   },
   "files": [
     "src/**/*.js",

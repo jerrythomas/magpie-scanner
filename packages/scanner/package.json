@@ -1,5 +1,6 @@
 {
-  "name": "@aristo/scanner",
+  "name": "@aritzo/scanner",
+  "version": "1.0.0-next.1",
   "module": "src/index.js",
   "type": "module",
   "publishConfig": {
@@ -23,6 +24,6 @@
     }
   },
   "dependencies": {
-    "@aristo/patterns": "workspace:*"
+    "@aritzo/patterns": "workspace:*"
   }
 }

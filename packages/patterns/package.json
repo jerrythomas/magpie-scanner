@@ -1,5 +1,5 @@
 {
-  "name": "@aristo/patterns",
+  "name": "@aritzo/patterns",
   "version": "1.0.0-next.1",
   "module": "src/index.js",
   "type": "module",
